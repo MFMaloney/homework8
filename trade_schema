@@ -1,0 +1,27 @@
+Trading App - Allows users to browse posts by category, distance or user. Uses a locator to limit how far away the other users they find are. Allows users to communicate with eachother 
+and set up a trade.
+
+Schema:
+
+User:
+email - string
+name - string
+username - string
+password -string (through devise)
+avatar - image through paperclip
+location - string? (from geolocator)
+
+
+Posts:
+user_id - integer
+info - text
+image - paperclip
+location - string(item could be in a location different from user)
+
+Products:
+user_id - int
+description - text
+
+Categories:
+title - string
+prduct_id - int
